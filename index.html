@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Fun Website</title>
+
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      margin-top: 40px;
+    }
+
+    img {
+      width: 200px;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background: orange;
+    }
+
+    button:hover {
+      background: darkorange;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Welcome to My Website</h1>
+
+  <p>Hello! My name is Anshul.</p>
+
+  <img src="https://via.placeholder.com/200" alt="My Image">
+
+  <br>
+
+  <button onclick="changeColor()">Change Background</button>
+
+  <p id="message"></p>
+
+  <script>
+    function changeColor() {
+
+      const colors = ["#111", "blue", "green", "purple", "brown", "teal"];
+
+      const randomColor =
+        colors[Math.floor(Math.random() * colors.length)];
+
+      document.body.style.backgroundColor = randomColor;
+
+      document.getElementById("message").innerHTML =
+        "Background changed!";
+    }
+  </script>
+
+</body>
+</html>
